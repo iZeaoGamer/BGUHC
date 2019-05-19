@@ -33,7 +33,7 @@ class UHCSignEvent extends PluginBase implements Listener {
         $block = $event->getBlock();
         $tile = $level->getTile($block);
         if($tile instanceof Sign) {
-            if(!($tile->getText()[0] === $this->plugin->prefix || $tile->getText()[0] === "[BGUHC]")) return true;
+            if(!($tile->getText()[0] === $this->plugin->prefix || $tile->getText()[0] === "§7[§cUHC§7]")) return true;
             if($this->plugin->mode != 1)
                 $this->joinGame($tile, $player);
             else

@@ -2,7 +2,7 @@
 
 namespace bguhc\tasks;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
 use bguhc\events\UHCWorld;
 
@@ -10,16 +10,15 @@ use pocketmine\utils\TextFormat as T;
 
 use bguhc\Main;
 
-class WaitTask extends PluginTask {
+class WaitTask extends Task {
 
     private $plugin;
 
     public function __construct(Main $plugin) {
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
 
-    public function onRun($tick) {
+    public function onRun(int $tick) {
         $uhcworld = UHCWorld::getInstance();
         $config = $uhcworld->getWorldConfig();
         $worlds = $config->getAll();

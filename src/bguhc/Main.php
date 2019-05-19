@@ -3,7 +3,7 @@
 namespace bguhc;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
 use pocketmine\utils\Config;
 
@@ -67,9 +67,9 @@ class Main extends PluginBase {
     }
 
     private function registerTasks() {
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new WaitTask($this), 20);
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new GameTask($this), 20);
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new RefreshSignTask($this), 20);
+        $this->getScheduler()->scheduleRepeatingTask(new WaitTask($this), 20);
+        $this->getScheduler()->scheduleRepeatingTask(new GameTask($this), 20);
+        $this->getScheduler()->scheduleRepeatingTask(new RefreshSignTask($this), 20);
     }
 }
 

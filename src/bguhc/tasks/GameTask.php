@@ -2,7 +2,7 @@
 
 namespace bguhc\tasks;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
 use bguhc\events\UHCWorld;
 
@@ -12,12 +12,11 @@ use pocketmine\Player;
 
 use bguhc\Main;
 
-class GameTask extends PluginTask {
+class GameTask extends Task {
 
     private $plugin;
 
     public function __construct(Main $plugin) {
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
 

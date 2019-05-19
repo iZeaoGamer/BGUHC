@@ -27,7 +27,7 @@ class UHCCommand extends PluginBase {
     }
 
     public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
-        if($command->getName() == "bguhc") {
+        if($command->getName() == "uhc") {
             if(!isset($args[0])) {
                 $this->executeHelpPage($sender);
                 return true;
@@ -103,18 +103,18 @@ class UHCCommand extends PluginBase {
 
     private function executeHelpPage($player) {
         $player->sendMessage($this->plugin->prefix . T::DARK_AQUA . "========[" . T::AQUA . "UHC HELP" . T::DARK_AQUA . "]========");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setsign: " . T::WHITE . "Register a new sign for an UHC match.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc delsign: " . T::WHITE . "Delete an already exising UHC sign.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc resetmode: " . T::WHITE . "Set the plugin mode to its default value.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc devmode enable|disable: " . T::WHITE . "Enable/disable dev mode.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc debugcfg: " . T::WHITE . "Debug the UHC world data config.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc resetcfg: " . T::WHITE . "Clear the UHC world data config.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn pos1: " . T::WHITE . "Set first position of the spawn selection.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn pos2: " . T::WHITE . "Set second position of the spawn selection.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn copy: " . T::WHITE . "Copy the blocks in the spawn selection.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn spawnpoint: " . T::WHITE . "Set the spawnpoint of the UHC world.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn config: " . T::WHITE . "Save the current data into the spawn config.");
-        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/bguhc setspawn debug: " . T::WHITE . "Debug the spawn data.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setsign: " . T::WHITE . "Register a new sign for an UHC match.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc delsign: " . T::WHITE . "Delete an already exising UHC sign.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc resetmode: " . T::WHITE . "Set the plugin mode to its default value.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc devmode enable|disable: " . T::WHITE . "Enable/disable dev mode.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc debugcfg: " . T::WHITE . "Debug the UHC world data config.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc resetcfg: " . T::WHITE . "Clear the UHC world data config.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn pos1: " . T::WHITE . "Set first position of the spawn selection.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn pos2: " . T::WHITE . "Set second position of the spawn selection.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn copy: " . T::WHITE . "Copy the blocks in the spawn selection.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn spawnpoint: " . T::WHITE . "Set the spawnpoint of the UHC world.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn config: " . T::WHITE . "Save the current data into the spawn config.");
+        $player->sendMessage($this->plugin->prefix . T::LIGHT_PURPLE . " - " . T::AQUA . "/uhc setspawn debug: " . T::WHITE . "Debug the spawn data.");
         $player->sendMessage($this->plugin->prefix . T::DARK_AQUA . "========[" . T::AQUA . "UHC HELP" . T::DARK_AQUA . "]========");
     }
 }

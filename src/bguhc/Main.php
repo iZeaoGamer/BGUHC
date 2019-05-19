@@ -63,7 +63,7 @@ class Main extends PluginBase {
     }
 
     private function registerCommands() {
-        $this->getCommand("bguhc")->setExecutor(new UHCCommand($this), $this);
+        $this->getCommand("uhc")->setExecutor(new UHCCommand($this), $this);
     }
 
     private function registerTasks() {

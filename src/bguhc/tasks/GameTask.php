@@ -20,7 +20,7 @@ class GameTask extends Task {
         $this->plugin = $plugin;
     }
 
-    public function onRun($tick) {
+    public function onRun(int $tick) {
         $uhcworld = UHCWorld::getInstance();
         $config = $uhcworld->getWorldConfig();
         $worlds = $config->getAll();

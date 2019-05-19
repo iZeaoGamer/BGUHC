@@ -2,7 +2,7 @@
 
 namespace bguhc\tasks;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 
 use bguhc\events\UHCWorld;
 
@@ -12,16 +12,15 @@ use pocketmine\tile\Sign;
 
 use bguhc\Main;
 
-class RefreshSignTask extends PluginTask {
+class RefreshSignTask extends Task {
 
     private $plugin;
 
     public function __construct(Main $plugin) {
-        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
 
-    public function onRun($tick) {
+    public function onRun(int $tick) {
         $level = $this->plugin->getServer()->getDefaultLevel();
         $tiles = $level->getTiles();
         foreach($tiles as $tile) {
